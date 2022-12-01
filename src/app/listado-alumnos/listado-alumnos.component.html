@@ -1,0 +1,18 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Fecha Nac</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let alumno of alumnos">
+                <td>{{alumno.nombre}}</td>
+                <td>{{alumno.apellido}}</td>
+                <td><span [ngClass]="alumno.genero=='femenino' ? 'btn btn-danger' : 'btn btn-success'">{{alumno.genero}}</span></td>
+                <td>{{alumno.fnac|date}}</td>
+            </tr>
+    </tbody>
+</table>
